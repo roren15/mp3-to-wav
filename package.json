@@ -1,0 +1,29 @@
+{
+  "name": "mp3-to-wav",
+  "version": "0.1.0",
+  "description": "transfer mp3 file to wav type, for both audio type mono or stero",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "mp3",
+    "wav",
+    "transfer",
+    "file",
+    "mono",
+    "stero"
+  ],
+  "author": "roren15 <13204611934@126.com>",
+  "license": "MIT",
+  "dependencies": {
+    "audio-buffer-from": "^1.1.1",
+    "av": "^0.4.9",
+    "fs-extra": "^7.0.1",
+    "is-buffer": "^2.0.3",
+    "mp3": "^0.1.0",
+    "node-wav": "0.0.2",
+    "to-array-buffer": "^3.1.1",
+    "typedarray-to-buffer": "^3.1.5"
+  }
+}
