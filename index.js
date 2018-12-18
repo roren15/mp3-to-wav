@@ -10,7 +10,7 @@ class Mp32Wav {
   constructor(input_file_path, output_dir) {
 
     if (!utils.checkArgsNotNull(arguments)) {
-      throw new Exception('err arguments')
+      throw new Error('err arguments')
     }
     this._input_file_path = input_file_path
     this._input_file_name = utils.splitFilename(input_file_path)

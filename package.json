@@ -1,6 +1,6 @@
 {
   "name": "mp3-to-wav",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "transfer mp3 file to wav type, for both audio type mono or stero",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,16 @@
     "mono",
     "stero"
   ],
-  "author": "roren15 <13204611934@126.com>",
+  "homepage": "https://github.com/roren15/mp3-to-wav",
+  "author": {
+    "name": "roren15",
+    "email": "13204611934@126.com",
+    "url": "https://github.com/roren15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roren15/mp3-to-wav.git"
+  },
   "license": "MIT",
   "dependencies": {
     "audio-buffer-from": "^1.1.1",
@@ -25,5 +34,9 @@
     "node-wav": "0.0.2",
     "to-array-buffer": "^3.1.1",
     "typedarray-to-buffer": "^3.1.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/roren15/mp3-to-wav/issues"
+  },
+  "readmeFilename": "README.md"
 }
