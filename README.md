@@ -1,6 +1,8 @@
 # mp3-to-wav
 
-Convert mp3 file to wav type, for both audio type mono or stero
+Convert `mp3` audio data to `wav` type, for both audio type mono and stero
+
+[![npm install mp3-to-wav](https://nodei.co/npm/mp3-to-wav.png?mini=true)](https://www.npmjs.com/package/mp3-to-wav)
 
 ## 1. Install
 
