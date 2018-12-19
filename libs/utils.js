@@ -117,7 +117,14 @@ module.exports = {
   splitFilename(path) {
 
     let split = path.split('/')
-    return split[split.length - 1]
+    return split.slice(-1)
+  },
+
+  splitFileDir(path) {
+
+    let split = path.split('/')
+    split.splice(-1, 1)
+    return split.join('/')
   },
 
   /**
@@ -141,5 +148,21 @@ module.exports = {
 
     this.ensurePathExists(fullPath)
     fs.writeFileSync(fullPath, data)
-  }
+  },
+
+  generateRandomNum(num = 10) {
+
+    // 方法1
+    let res = 0
+    for (let i = 1; i <= num; i++) {
+      res += Math.round(Math.random() * num) * Math.pow(num, i);
+    }
+    return res
+    // 方法2
+    // return Math.random().toString().slice(-num)
+  },
+
+  generateTimestampRandom(splitDirPathFlag = '-') {
+    return new Date().getTime() + splitDirPathFlag + this.generateRandomNum(6)
+  },
 }

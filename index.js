@@ -9,9 +9,10 @@ class Mp32Wav {
 
   constructor(input_file_path, output_dir) {
 
-    if (!utils.checkArgsNotNull(arguments)) {
+    if (!utils.checkArgsNotNull(...input_file_path)) {
       throw new Error('err arguments')
     }
+    output_dir = utils.judgeNotNull(output_dir) ? output_dir : utils.splitFileDir(input_file_path)
     this._input_file_path = input_file_path
     this._input_file_name = utils.splitFilename(input_file_path)
     this._output_dir = output_dir
@@ -52,7 +53,7 @@ class Mp32Wav {
 
   saveForWav(buffer, savePath, filename = '', sampleRate, channels, float = true) {
 
-    if (!filename) filename = 'temp-' + this.generateTimestampRandom()
+    if (!filename) filename = 'temp-' + utils.generateTimestampRandom()
     const fileFullName = filename + '.wav'
 
     try {

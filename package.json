@@ -1,7 +1,7 @@
 {
   "name": "mp3-to-wav",
-  "version": "0.1.5",
-  "description": "transfer mp3 file to wav type, for both audio type mono or stero",
+  "version": "0.1.6",
+  "description": "A mp3 converter, converting mp3 file to wav type, for both audio type mono or stero",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
@@ -12,7 +12,10 @@
     "transfer",
     "file",
     "mono",
-    "stero"
+    "stero",
+    "mp3-to-wav",
+    "converter",
+    "convert"
   ],
   "homepage": "https://github.com/roren15/mp3-to-wav",
   "author": {
