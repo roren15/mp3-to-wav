@@ -13,7 +13,7 @@ $ npm install --save mp3-to-wav
 ```javascript
 const Mp32Wav = require('mp3-to-wav')
 new Mp32Wav('mp3 file absolute dir / .mp3 file').exec()
-// will produce wav file on providing dir
+// will produce wav file on provided dir
 ```
 
 ## 3. Api
