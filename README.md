@@ -1,14 +1,14 @@
 # mp3-to-wav
 
-Transfer mp3 file to wav type, for both audio type mono or stero
+Convert mp3 file to wav type, for both audio type mono or stero
 
-## 1. install
+## 1. Install
 
 ```bash
 $ npm install --save mp3-to-wav
 ```
 
-## 2. usage
+## 2. Usage
 
 ```javascript
 const Mp32Wav = require('mp3-to-wav')
@@ -16,7 +16,7 @@ new Mp32Wav('mp3 file absolute dir / .mp3 file','wav file saving dir').exec()
 // will produce wav file on providing dir
 ```
 
-## 3. api
+## 3. Api
 
 ### Init
 

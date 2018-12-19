@@ -1,6 +1,6 @@
 {
   "name": "mp3-to-wav",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A mp3 converter, converting mp3 file to wav type, for both audio type mono or stero",
   "main": "index.js",
   "scripts": {
