@@ -23,7 +23,8 @@ class Mp32Wav {
 
     try {
       const mp3DecodeRes = await this.decodeMp3(this._input_file_path)
-      this.saveForWav(mp3DecodeRes.data, this._output_dir, this._output_file_name, mp3DecodeRes.sampleRate, mp3DecodeRes.channels, mp3DecodeRes.float)
+      const wavPath = this.saveForWav(mp3DecodeRes.data, this._output_dir, this._output_file_name, mp3DecodeRes.sampleRate, mp3DecodeRes.channels, mp3DecodeRes.float)
+      console.log(`Mp32Wav convert to wav file successfully, saving on: ${wavPath}`)
     } catch (err) {
       console.error(`mp3 to wav exec err: ${err.message}`)
     }
@@ -55,11 +56,12 @@ class Mp32Wav {
 
     if (!filename) filename = 'temp-' + utils.generateTimestampRandom()
     const fileFullName = filename + '.wav'
+    const fileFullPath = path.join(savePath, fileFullName)
 
     try {
       const wavData = wav.encode(buffer, {sampleRate: sampleRate, float: float, channels: channels})
-      utils.saveToPath(path.join(savePath, fileFullName), wavData)
-      return fileFullName
+      utils.saveToPath(fileFullPath, wavData)
+      return fileFullPath
     } catch (err) {
       throw new Error(`saveForWav err: ${err.message}`)
     }

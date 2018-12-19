@@ -12,7 +12,7 @@ $ npm install --save mp3-to-wav
 
 ```javascript
 const Mp32Wav = require('mp3-to-wav')
-new Mp32Wav('mp3 file absolute dir / .mp3 file','wav file saving dir').exec()
+new Mp32Wav('mp3 file absolute dir / .mp3 file').exec()
 // will produce wav file on providing dir
 ```
 
@@ -35,9 +35,6 @@ const mp32Wav = new Mp32Wav('mp3 file dir / .mp3 file','wav file saving dir')
 #### mp32Wav.exec()
 
 convert mp3 file to wav file
-
-|arguments|required|description|
-|:------:|:------:|------|
 
 #### mp32Wav.decodeMp3()
 
