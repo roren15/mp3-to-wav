@@ -22,7 +22,7 @@ new Mp32Wav('mp3 file absolute dir / .mp3 file').exec()
 
 ### Init
 
-```
+```javascript
 const Mp32Wav = require('mp3-to-wav')
 const mp32Wav = new Mp32Wav('mp3 file dir / .mp3 file','wav file saving dir')
 ```
