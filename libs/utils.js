@@ -135,7 +135,7 @@ module.exports = {
 
     if (!dirPath) return
     let separatorCharacter = '/'
-    if (dirPath.includes('\\') separatorCharacter = '\\'
+    if (dirPath.includes('\\')) separatorCharacter = '\\'
     let splitDirPath = dirPath.split(separatorCharacter)
     if (splitDirPath.length > 1) {
       splitDirPath.pop()
