@@ -19,7 +19,7 @@ class Mp32Wav {
     this._output_file_name = this._input_file_name.toString().replace(/\.mp3/i, '')
   }
 
-  async exec({returnFloat) {
+  async exec({returnFloat}) {
 
     try {
       const mp3DecodeRes = await this.decodeMp3(this._input_file_path)
