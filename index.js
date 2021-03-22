@@ -19,10 +19,11 @@ class Mp32Wav {
     this._output_file_name = this._input_file_name.toString().replace(/\.mp3/i, '')
   }
 
-  async exec() {
+  async exec({returnFloat}) {
 
     try {
       const mp3DecodeRes = await this.decodeMp3(this._input_file_path)
+      if ( returnFloat ) mp3DecodeRes.float = returnFloat
       const wavPath = this.saveForWav(mp3DecodeRes.data, this._output_dir, this._output_file_name, mp3DecodeRes.sampleRate, mp3DecodeRes.channels, mp3DecodeRes.float)
       console.log(`Mp32Wav convert to wav file successfully, saving on: ${wavPath}`)
     } catch (err) {
